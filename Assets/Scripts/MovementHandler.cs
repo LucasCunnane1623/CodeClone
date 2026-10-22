@@ -63,12 +63,12 @@ public class MovementHandler : MonoBehaviour
         inputSystem.Player.Move.canceled -= OnMoveEnd;
         inputSystem.Disable();
     }
-    public Vector2 GetAimDir()
-    {
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorld.z = 0f;
-        return ((Vector2)mouseWorld - (Vector2)transform.position).normalized;
-    }
+    //public Vector2 GetAimDir()
+    //{
+    //    Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    //    mouseWorld.z = 0f;
+    //    return ((Vector2)mouseWorld - (Vector2)transform.position).normalized;
+    //}
     private void OnMove(InputAction.CallbackContext context)
     {
 
@@ -104,6 +104,6 @@ public class MovementHandler : MonoBehaviour
     }
     private void Update()
     {
-        aimDir = GetAimDir();
+        //aimDir = GetAimDir();
     }
 }
